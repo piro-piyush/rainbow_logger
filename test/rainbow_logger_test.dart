@@ -5,17 +5,25 @@ import 'package:rainbow_logger/rainbow_logger.dart';
 void main() {
   group('RainbowLogger', () {
     late List<String> printedMessages;
+    late void Function(String? message, {int? wrapWidth}) originalDebugPrint;
 
-    // Override debugPrint to capture logs
     setUp(() {
       printedMessages = [];
+      originalDebugPrint = debugPrint;
+
+      // Override debugPrint to intercept logger output for testing
       debugPrint = (String? message, {int? wrapWidth}) {
         if (message != null) printedMessages.add(message);
       };
     });
 
+    tearDown(() {
+      // Restore original debugPrint after each test
+      debugPrint = originalDebugPrint;
+    });
+
     test('errorPrint logs with ❌ prefix and red color', () {
-      RainbowLogger.errorPrint("Test error");
+      RainbowLogger.error("Test error");
 
       expect(printedMessages.length, 1);
       expect(printedMessages.first.contains('❌'), isTrue);
@@ -23,7 +31,7 @@ void main() {
     });
 
     test('successPrint logs with ✅ prefix and green color', () {
-      RainbowLogger.successPrint("Test success");
+      RainbowLogger.success("Test success");
 
       expect(printedMessages.length, 1);
       expect(printedMessages.first.contains('✅'), isTrue);
@@ -31,7 +39,7 @@ void main() {
     });
 
     test('infoPrint logs with ℹ️ prefix and blue color', () {
-      RainbowLogger.infoPrint("Test info");
+      RainbowLogger.info("Test info");
 
       expect(printedMessages.length, 1);
       expect(printedMessages.first.contains('ℹ️'), isTrue);
@@ -39,7 +47,7 @@ void main() {
     });
 
     test('Reusable instance works and logs with custom prefix/suffix', () {
-      final logger = RainbowLogger(
+      const logger = RainbowLogger(
         prefix: "🎯",
         suffix: "END",
         color: Colors.cyan,

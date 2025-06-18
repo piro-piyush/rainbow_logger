@@ -1,0 +1,17 @@
+name: example
+description: A Flutter example showcasing colorful logging with Rainbow Logger 🌈.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  rainbow_logger:

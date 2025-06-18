@@ -1,6 +1,6 @@
   name: rainbow_logger
   description: A colorful and expressive Flutter logger for terminal/debug output with emoji prefixes and ANSI color codes.
-  version: 0.0.2
+  version: 1.0.0
   homepage: https://github.com/piro-piyush/rainbow_logger
   repository: https://github.com/piro-piyush/rainbow_logger
   issue_tracker: https://github.com/piro-piyush/rainbow_logger/issues
@@ -13,16 +13,41 @@
   dependencies:
     flutter:
       sdk: flutter
+    path_provider: ^2.1.5
 
   dev_dependencies:
     flutter_test:
       sdk: flutter
     flutter_lints: ^6.0.0
+  library: true
 
   # Optional: Include topics/tags to improve search visibility on pub.dev
   topics:
-    - logging
-    - debug
-    - terminal
-    - flutter
-    - ansi
+      - logging
+      - logger
+      - flutter
+      - dart
+      - debug
+      - debugging
+      - console
+      - terminal
+      - terminal-output
+      - ansi
+      - ansi-colors
+      - color
+      - colorful-logs
+      - emoji
+      - emoji-logs
+      - print
+      - devtools
+      - developer-tools
+      - diagnostics
+      - developer-experience
+      - cli
+      - development
+      - formatter
+      - log-levels
+      - stdout
+      - stderr
+      - visual-logs
+      - enhanced-logging
