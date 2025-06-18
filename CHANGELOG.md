@@ -1,3 +1,11 @@
+## [0.0.2] - 2025-06-18
+
+### Changed
+- Updated README and documentation for better clarity and examples.
+- Improved usage instructions for both static and instance logging methods.
+
+---
+
 ## [0.0.1] - 2025-06-18
 
 ### Added
