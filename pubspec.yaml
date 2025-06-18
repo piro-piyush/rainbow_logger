@@ -30,4 +30,4 @@
 
   # Optional but helpful for command-line Dart users
   executables:
-    rainbow_logger: bin/main.dart
+    rainbow_logger: rainbow_logger
