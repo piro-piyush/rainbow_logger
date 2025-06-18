@@ -3,12 +3,13 @@
 ### Added
 - Initial release of `rainbow_logger`.
 - Support for colorful terminal logging using ANSI escape codes.
-- `RainbowLogger` class with customizable prefix, suffix, color, and timestamp.
+- `RainbowLogger` class with customizable prefix, suffix, color, and timestamp options.
 - Static methods for:
-    - `errorPrint` (❌),
-    - `successPrint` (✅),
-    - `infoPrint` (ℹ️),
-    - `warningPrint` (⚠️),
-    - `logPrint` (📝).
-- Built-in ANSI color mapping via `RainbowColors`.
-- Example and test cases included.
+  - `errorPrint` (❌),
+  - `successPrint` (✅),
+  - `infoPrint` (ℹ️),
+  - `warningPrint` (⚠️),
+  - `logPrint` (📝).
+- Built-in ANSI color mapping via the `RainbowColors` helper class.
+- Works with both Flutter and pure Dart CLI apps.
+- Includes example usage and test cases for easy integration and verification.
