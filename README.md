@@ -1,7 +1,8 @@
 # 🌈 RainbowLogger
 
 **RainbowLogger** is a colorful and expressive logger for Flutter and Dart apps.  
-It adds clarity and visual appeal to your console output using emoji, colors, and timestamps — perfect for stylish and structured debugging!
+It adds clarity and visual appeal to your console output using emoji, colors, and timestamps —
+perfect for stylish and structured debugging!
 
 ---
 
@@ -46,8 +47,10 @@ import 'package:rainbow_logger/rainbow_logger.dart';
 ### 🔹 Quick Static Logging
 
 ```dart
-RainbowLogger.errorPrint("Something went wrong!");
-RainbowLogger.successPrint("Operation completed successfully.");
+RainbowLogger.errorPrint
+("Something went wrong!
+"
+);RainbowLogger.successPrint("Operation completed successfully.");
 RainbowLogger.infoPrint("User has entered the dashboard.");
 RainbowLogger.warningPrint("This is just a warning.");
 
@@ -55,14 +58,19 @@ RainbowLogger.logPrint(
 "Custom colored log",
 color: Colors.purple,
 prefix: "💡",
-suffix: "✔️",
-showTimestamp: true,
+suffix: "✔️"
+,
+showTimestamp
+:
+true
+,
 );
 ```
 
 ### 🔸 Reusable Logger Instance
 
 ```dart
+
 final logger = RainbowLogger(
   prefix: "🚀",
   suffix: "✅",
@@ -70,10 +78,11 @@ final logger = RainbowLogger(
   showTimestamp: true,
 );
 
-logger.print("Reusable logger in action!");
+logger.print
+("Reusable logger in action!
+"
+);
 ```
-
-
 
 ---
 
@@ -88,7 +97,8 @@ logger.print("Reusable logger in action!");
 [12:00:01] 🚀 Reusable logger in action! ✅
 ```
 
-> ✅ **Note:** ANSI colors appear correctly in terminals and IDE consoles like VS Code, IntelliJ, or Android Studio.
+> ✅ **Note:** ANSI colors appear correctly in terminals and IDE consoles like VS Code, IntelliJ, or
+> Android Studio.
 
 ---
 
