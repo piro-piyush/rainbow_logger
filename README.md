@@ -47,24 +47,16 @@ import 'package:rainbow_logger/rainbow_logger.dart';
 ### 🔹 Quick Static Logging
 
 ```dart
-RainbowLogger.errorPrint
-("Something went wrong!
-"
-);RainbowLogger.successPrint("Operation completed successfully.");
+RainbowLogger.errorPrint("Something went wrong!");
+RainbowLogger.successPrint("Operation completed successfully.");
 RainbowLogger.infoPrint("User has entered the dashboard.");
 RainbowLogger.warningPrint("This is just a warning.");
-
 RainbowLogger.logPrint(
 "Custom colored log",
 color: Colors.purple,
 prefix: "💡",
-suffix: "✔️"
-,
-showTimestamp
-:
-true
-,
-);
+suffix: "✔️",
+showTimestamp:true,);
 ```
 
 ### 🔸 Reusable Logger Instance
@@ -78,10 +70,7 @@ final logger = RainbowLogger(
   showTimestamp: true,
 );
 
-logger.print
-("Reusable logger in action!
-"
-);
+logger.print("Reusable logger in action!");
 ```
 
 ---
